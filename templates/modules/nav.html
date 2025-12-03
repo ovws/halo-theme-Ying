@@ -4,8 +4,8 @@
     <div class="flex justify-between my-4 items-center">
       <h2 class="!text-sm"><span th:text="${theme.config.info_card.web_info_text}"></span></h2>
       <nav>
-        <ul class="flex space-x-2">
-          <li th:each="social : ${theme.config.info_card.socials}"><a th:if="${social.enabled and not #strings.isEmpty(social.url)}" th:href="${social.url}" target="_blank" class="inline-block" th:alt="${social.title}" th:attr="aria-label=${social.title}"><i th:class="${social.icon}"></i></a></li>
+<ul class="flex space-x-2">
+          <li th:each="social : ${theme.config.info_card.socials}"><a th:if="${social.enabled == 'true' and not #strings.isEmpty(social.url)}" th:href="${social.url}" target="_blank" class="inline-block" th:alt="${social.title}" th:attr="aria-label=${social.title}"><i th:class="${social.icon}"></i></a></li>
           <li th:if="${pluginFinder.available('PluginFeed')}" class="inline-block"><a href="/rss.xml" title="RSS" target="_blank"><i class="ri-rss-fill"></i></a></li>
         </ul>
       </nav>
