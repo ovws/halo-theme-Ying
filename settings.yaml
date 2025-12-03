@@ -262,7 +262,7 @@ spec:
         - $formkit: text
           name: footer_copyright_url
           label: 网站版权作者信息链接地址
-          value: "https://skylan.cc/"
+          value: "https://loser.dev/"
 
     # 我的设备设置
     - group: equipment_card
